@@ -1,0 +1,104 @@
+html {
+  font-family: "Montserrat Alternates", sans-serif;
+  background: #1e1f29;
+  color: #e1e1e8;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 5px;
+}
+.app {
+  width: auto;
+  height: 97vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.mainBox {
+  width: 60vw;
+  text-align: center;
+  margin-top: -20vh;
+}
+.quoteBox {
+  text-align: center;
+  color: #ff5555;
+  font-size: 1.4em;
+}
+.authorBox {
+  color: #50fa7b;
+  margin: 5%;
+}
+
+.actionButton {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease-in;
+}
+.footerBox {
+  order: 2;
+  width: 80vw;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.footerBox a {
+  color: #6272a4;
+}
+.fab {
+  color: #f1fa8c;
+  font-size: 2em;
+}
+
+.actionButton:hover,
+.fab:hover,
+a:hover {
+  cursor: pointer;
+}
+.tweetButton {
+  margin-left: 10px;
+}
+.tweetButton:hover {
+  background-color: #6272a4;
+}
+.actionButton:not(.tweetButton):hover {
+  background-color: #50fa7b;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-height: 450px) {
+  .footerBox {
+    display: none;
+    visibility: hidden;
+  }
+  .mainBox {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .actionButton {
+    margin: 5px;
+  }
+  .quoteBox {
+    font-size: 1.2em;
+  }
+}
